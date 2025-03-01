@@ -13,12 +13,14 @@ import newspaper_icon from '../assets/newspaper.png';
 import { Home } from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
-import { Updates } from './screens/Updates';
+import Updates from './screens/Updates';
 import { NotFound } from './screens/NotFound';
 import { Cafeteria } from './screens/Cafeteria';
 import { Classroom } from './screens/Classroom';
 import { Club } from './screens/Club';
 import { Transport } from './screens/Transport';
+import ProfilePage from './screens/profilePage';
+
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -53,22 +55,37 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
+    // Profile: {
+    //   screen: (props) => <Profile {...props} />,
+    //   options: {
+    //     tabBarIcon: ({ color, size }) => (
+    //       <Image
+    //       source={user_icon}
+    //       tintColor={color}
+    //       style={{
+    //         width: size,
+    //         height: size,
+    //       }}
+    //       />
+    //     ),
+    //   },
+    //   initialParams: {
+    //     user: 'jane', // Passing initial parameters here for the Profile screen
+    //   },
+    // },
     Profile: {
-      screen: (props) => <Profile {...props} />,
+      screen: ProfilePage,
       options: {
         tabBarIcon: ({ color, size }) => (
           <Image
-          source={user_icon}
-          tintColor={color}
-          style={{
-            width: size,
-            height: size,
-          }}
+            source={user_icon}
+            tintColor={color}
+            style={{
+              width: size,
+              height: size,
+            }}
           />
         ),
-      },
-      initialParams: {
-        user: 'jane', // Passing initial parameters here for the Profile screen
       },
     },
   },
