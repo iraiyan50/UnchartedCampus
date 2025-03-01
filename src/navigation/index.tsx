@@ -114,7 +114,7 @@ const RootStack = createNativeStackNavigator({
     Cafeteria: {
       screen: Cafeteria,
       linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
+        // path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
           user: (value) => value.replace(/^@/, ''),
         },
@@ -126,7 +126,7 @@ const RootStack = createNativeStackNavigator({
     Classroom: {
       screen: Classroom,
       linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
+        // path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
           user: (value) => value.replace(/^@/, ''),
         },
@@ -138,7 +138,7 @@ const RootStack = createNativeStackNavigator({
     Club: {
       screen: Club,
       linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
+        // path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
           user: (value) => value.replace(/^@/, ''),
         },
@@ -150,7 +150,7 @@ const RootStack = createNativeStackNavigator({
     Transport: {
       screen: Transport,
       linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
+        // path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
           user: (value) => value.replace(/^@/, ''),
         },
