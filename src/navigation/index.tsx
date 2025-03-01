@@ -6,13 +6,19 @@ import {
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
-import bell from '../assets/bell.png';
-import newspaper from '../assets/newspaper.png';
+import bell_icon from '../assets/bell.png';
+import home_icon from '../assets/home.png';
+import user_icon from '../assets/user.png';
+import newspaper_icon from '../assets/newspaper.png';
 import { Home } from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
 import { Updates } from './screens/Updates';
 import { NotFound } from './screens/NotFound';
+import { Cafeteria } from './screens/Cafeteria';
+import { Classroom } from './screens/Classroom';
+import { Club } from './screens/Club';
+import { Transport } from './screens/Transport';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -22,7 +28,7 @@ const HomeTabs = createBottomTabNavigator({
         title: 'Feed',
         tabBarIcon: ({ color, size }) => (
           <Image
-            source={newspaper}
+            source={home_icon}
             tintColor={color}
             style={{
               width: size,
@@ -37,7 +43,7 @@ const HomeTabs = createBottomTabNavigator({
       options: {
         tabBarIcon: ({ color, size }) => (
           <Image
-            source={bell}
+            source={bell_icon}
             tintColor={color}
             style={{
               width: size,
@@ -45,6 +51,24 @@ const HomeTabs = createBottomTabNavigator({
             }}
           />
         ),
+      },
+    },
+    Profile: {
+      screen: (props) => <Profile {...props} />,
+      options: {
+        tabBarIcon: ({ color, size }) => (
+          <Image
+          source={user_icon}
+          tintColor={color}
+          style={{
+            width: size,
+            height: size,
+          }}
+          />
+        ),
+      },
+      initialParams: {
+        user: 'jane', // Passing initial parameters here for the Profile screen
       },
     },
   },
@@ -59,18 +83,6 @@ const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Profile: {
-      screen: Profile,
-      linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
-        parse: {
-          user: (value) => value.replace(/^@/, ''),
-        },
-        stringify: {
-          user: (value) => `@${value}`,
-        },
-      },
-    },
     Settings: {
       screen: Settings,
       options: ({ navigation }) => ({
@@ -81,6 +93,54 @@ const RootStack = createNativeStackNavigator({
           </HeaderButton>
         ),
       }),
+    },
+    Cafeteria: {
+      screen: Cafeteria,
+      linking: {
+        path: ':user(@[a-zA-Z0-9-_]+)',
+        parse: {
+          user: (value) => value.replace(/^@/, ''),
+        },
+        stringify: {
+          user: (value) => `@${value}`,
+        },
+      },
+    },
+    Classroom: {
+      screen: Classroom,
+      linking: {
+        path: ':user(@[a-zA-Z0-9-_]+)',
+        parse: {
+          user: (value) => value.replace(/^@/, ''),
+        },
+        stringify: {
+          user: (value) => `@${value}`,
+        },
+      },
+    },
+    Club: {
+      screen: Club,
+      linking: {
+        path: ':user(@[a-zA-Z0-9-_]+)',
+        parse: {
+          user: (value) => value.replace(/^@/, ''),
+        },
+        stringify: {
+          user: (value) => `@${value}`,
+        },
+      },
+    },
+    Transport: {
+      screen: Transport,
+      linking: {
+        path: ':user(@[a-zA-Z0-9-_]+)',
+        parse: {
+          user: (value) => value.replace(/^@/, ''),
+        },
+        stringify: {
+          user: (value) => `@${value}`,
+        },
+      },
     },
     NotFound: {
       screen: NotFound,
