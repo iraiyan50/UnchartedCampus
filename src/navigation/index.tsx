@@ -19,7 +19,7 @@ import { Cafeteria } from './screens/Cafeteria';
 import { Classroom } from './screens/Classroom';
 import { Club } from './screens/Club';
 import { Transport } from './screens/Transport';
-import ProfilePage from './screens/profilePage';
+import ProfilePage from './screens/ProfilePage';
 
 
 const HomeTabs = createBottomTabNavigator({
