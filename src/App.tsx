@@ -2,7 +2,10 @@ import { Assets as NavigationAssets } from '@react-navigation/elements';
 import { Asset } from 'expo-asset';
 import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
-import { Navigation } from './navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './navigation/screens/login';
+import HomeScreen from './navigation/screens/Home'; // Assuming you have a Home screen
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -12,19 +15,15 @@ Asset.loadAsync([
 
 SplashScreen.preventAutoHideAsync();
 
+const Stack = createStackNavigator();
+
 export function App() {
   return (
-    <Navigation
-      linking={{
-        enabled: 'auto',
-        prefixes: [
-          // Change the scheme to match your app's scheme defined in app.json
-          'helloworld://',
-        ],
-      }}
-      onReady={() => {
-        SplashScreen.hideAsync();
-      }}
-    />
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
