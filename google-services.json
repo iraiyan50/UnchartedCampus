@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819802562966",
+    "project_id": "unchartedcampus-69e82",
+    "storage_bucket": "unchartedcampus-69e82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819802562966:android:918f45dc28ea86214c7db7",
+        "android_client_info": {
+          "package_name": "com.bettercampus.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCv1zX2jK3-13IkyZriX4V0Fim8VjP1Fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

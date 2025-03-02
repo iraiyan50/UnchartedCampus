@@ -9,13 +9,17 @@
     "newArchEnabled": true,
     "scheme": "unchartedcampus",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.unchartedcampus.app",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.bettercampus.app",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -29,7 +33,16 @@
           "image": "./assets/splash-icon.png"
         }
       ],
-      "react-native-edge-to-edge"
-    ]
+      "react-native-edge-to-edge",
+      "expo-build-properties",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "184d3acb-9432-48be-9bf4-89b6eaa3af1e"
+      }
+    },
+    "owner": "fazzybooo"
   }
 }
