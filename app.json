@@ -9,12 +9,18 @@
     "newArchEnabled": true,
     "scheme": "unchartedcampus",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
+<<<<<<< HEAD
         "backgroundColor": "#ffffff"
+=======
+        "backgroundColor": "#ffffff",
+        "googleServicesFile": "./google-services.json"
+>>>>>>> 876a8307d8be9a6529db0c390ed6c2c0c11aeebd
       },
       "package": "com.anonymous.UnchartedCampus"
     },
@@ -30,7 +36,16 @@
           "image": "./assets/splash-icon.png"
         }
       ],
-      "react-native-edge-to-edge"
+      "react-native-edge-to-edge",
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
     ]
   }
 }

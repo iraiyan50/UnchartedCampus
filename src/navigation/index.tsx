@@ -21,6 +21,7 @@ import { Club } from './screens/Club';
 import  CampusNavigationAR  from './screens/CampusNavigationAR';
 import { Transport } from './screens/Transport';
 import ProfilePage from './screens/ProfilePage';
+import { Login } from './screens/Login';
 
 
 const HomeTabs = createBottomTabNavigator({
@@ -110,6 +111,14 @@ const HomeTabs = createBottomTabNavigator({
 
 const RootStack = createNativeStackNavigator({
   screens: {
+
+    Login: { // Add Login screen
+      screen: Login,
+      options: {
+        title: 'Login',
+        headerShown: false, // Optional: Hide header if not needed
+      },
+    },
     HomeTabs: {
       screen: HomeTabs,
       options: {

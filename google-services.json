@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "691061499333",
+    "project_id": "unchartedcampus",
+    "storage_bucket": "unchartedcampus.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691061499333:android:d519a3e24fb0b3886757ac",
+        "android_client_info": {
+          "package_name": "com.iutcse.unchartedcampus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3ejGTTW0jCa5CfxKXrxbu0JqW-5nOrqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
