@@ -44,6 +44,15 @@ export function Home() {
           Club
         </Button>
 
+        {/* <Button
+          mode="contained"
+          style={styles.button}
+          onPress={() => navigation.navigate('CampusNavigationAR', { user: 'jane' })} // Navigate to Camp
+          icon={() => <Icon name="account-group" size={24} color="white" />}
+        >
+          CampusNavigationAR
+        </Button> */}
+
         <Button
           mode="contained"
           style={styles.button}
