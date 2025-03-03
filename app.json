@@ -15,12 +15,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-<<<<<<< HEAD
-        "backgroundColor": "#ffffff"
-=======
+
         "backgroundColor": "#ffffff",
         "googleServicesFile": "./google-services.json"
->>>>>>> 876a8307d8be9a6529db0c390ed6c2c0c11aeebd
+
       },
       "package": "com.anonymous.UnchartedCampus"
     },
