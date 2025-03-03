@@ -18,6 +18,7 @@ import { NotFound } from './screens/NotFound';
 import { Cafeteria } from './screens/Cafeteria';
 import { Classroom } from './screens/Classroom';
 import { Club } from './screens/Club';
+import  CampusNavigationAR  from './screens/CampusNavigationAR';
 import { Transport } from './screens/Transport';
 import ProfilePage from './screens/ProfilePage';
 import { Login } from './screens/Login';
@@ -89,8 +90,24 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
+    CampusNavigationAR: {
+      screen: CampusNavigationAR,
+      options: {
+        tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+          <Image
+          source={newspaper_icon} // You can use a different icon for AR navigation
+          tintColor={color}
+          style={{
+            width: size,
+            height: size,
+          }}
+          />
+      ),
+    },
   },
+},
 });
+
 
 const RootStack = createNativeStackNavigator({
   screens: {
@@ -156,6 +173,18 @@ const RootStack = createNativeStackNavigator({
         },
       },
     },
+    // CampusNavigationAR: {
+    //   screen: CampusNavigationAR,
+    //   linking: {
+    //     // path: ':user(@[a-zA-Z0-9-_]+)',
+    //     parse: {
+    //       user: (value) => value.replace(/^@/, ''),
+    //     },
+    //     stringify: {
+    //       user: (value) => `@${value}`,
+    //     },
+    //   },
+    // },
     Transport: {
       screen: Transport,
       linking: {
