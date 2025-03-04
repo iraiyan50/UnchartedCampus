@@ -1,5 +1,5 @@
 import './gesture-handler';
-
+import '@react-native-firebase/app';
 import '@expo/metro-runtime'; // Necessary for Fast Refresh on Web
 import { registerRootComponent } from 'expo';
 

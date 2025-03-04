@@ -1,29 +1,24 @@
-import { Assets as NavigationAssets } from '@react-navigation/elements';
-import { Asset } from 'expo-asset';
-import * as SplashScreen from 'expo-splash-screen';
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { Navigation } from './navigation';
-
-Asset.loadAsync([
-  ...NavigationAssets,
-  require('./assets/newspaper.png'),
-  require('./assets/bell.png'),
-]);
-
+import { auth } from './firebaseConfig';
+import * as SplashScreen from 'expo-splash-screen';
+import '@react-native-firebase/app';
 SplashScreen.preventAutoHideAsync();
 
 export function App() {
+  useEffect(() => {
+    async function checkFirebase() {
+      console.log("Firebase Auth Initialized:", auth);
+      SplashScreen.hideAsync();
+    }
+    checkFirebase();
+  }, []);
+
   return (
     <Navigation
       linking={{
         enabled: 'auto',
-        prefixes: [
-          // Change the scheme to match your app's scheme defined in app.json
-          'helloworld://',
-        ],
-      }}
-      onReady={() => {
-        SplashScreen.hideAsync();
+        prefixes: ['helloworld://'],
       }}
     />
   );
