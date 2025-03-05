@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "scheme": "unchartedcampus",
     "ios": {
       "supportsTablet": true,
@@ -15,10 +15,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-
         "backgroundColor": "#ffffff",
         "googleServicesFile": "./google-services.json"
-
       },
       "package": "com.anonymous.UnchartedCampus"
     },
